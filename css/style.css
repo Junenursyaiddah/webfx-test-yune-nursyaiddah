@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/*theme switch*/
+ :root {
+	 --primary-color: #302ae6;
+	 --secondary-color: #536390;
+	 --font-color: #9394A5;
+	 --bg-color: #fff;
+   --bg-list:#fff;
+	 --heading-color: #fff;
+   --font-color-list: #F4F4F6;
+    --bg-image: url(../images/bg-desktop-light.jpg);
+}
+ [data-theme="dark"] {
+	 --primary-color: #9a97f3;
+	 --secondary-color: #818cab;
+	 --font-color: #e1e1ff;
+	 --bg-color: #181824;
+   --bg-list:#25273C;
+	 --heading-color: #fff;
+   --font-color-list: #25273C;
+  --bg-image: url(../images/bg-desktop-dark.jpg);
+}
+ body {
+	 background-color: var(--bg-color);
+	 color: var(--font-color);
+	 font-size: calc(1rem + 0.25vh);
+	 margin: 0 auto;
+	 font-family: 'Josefin Sans', sans-serif;
+	 font-size: 18px;
+}
+
+ a {
+	 color: var(--primary-color);
+	 text-decoration: none;
+	 border-bottom: 3px solid transparent;
+	 font-weight: bold;
+}
+ a:hover, a:focus {
+	 border-bottom: 3px solid currentColor;
+}
+
+h1 {
+	color: var(--heading-color);
+    font-size: 40px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    float: left;
+}
+
+
+.theme-switch-wrapper {
+	display: flex;
+	align-items: center;
+}
+.theme-switch-wrapper em {
+	margin-left: 10px;
+	font-size: 1rem;
+}
+.theme-switch {
+  margin-top: -70px;
+  float: left;
+  display: block;
+  width: 100%;
+}
+.hide {
+  display: none;
+}
+
+.slider {
+	background:url(../images/icon-sun.svg)  no-repeat;
+	width: 30px;
+	height: 50px;
+	float: right;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+input:checked + .slider {
+	background:url(../images/icon-moon.svg)  no-repeat;
+	width: 30px;
+	height: 50px;
+	cursor: pointer;
+}
+input:checked + .slider:before {
+	transform: translateX(26px);
+}
+
+.theme-bg {
+    background: var(--bg-image) no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.container {
+	  position: relative;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+
+.hero {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 550px 1fr;
+    grid-template-columns: 1fr 550px 1fr;
+    -ms-grid-rows: 110px 9fr 1fr;
+    grid-template-rows: 110px 9fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+  .title {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -ms-grid-column-align: center;
+    justify-self: center;
+    color: #574285;
+    font-size: 50px;
+  }
+  
+  
+  .add-todo-text-input {
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 91%;
+    height: 3rem;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    border: transparent;
+    margin-bottom: 20px;
+    padding-left: 60px;
+  }
+  
+  .round-list {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    position: relative;
+    top: 62px;
+    left: 19px;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #e6e6e6;
+    font-style: italic;
+  }
+  
+  :-ms-input-placeholder {
+    color: #e6e6e6;
+    font-style: italic;
+  }
+  
+  ::-ms-input-placeholder {
+    color: #e6e6e6;
+    font-style: italic;
+  }
+  
+  ::placeholder {
+    color: #e6e6e6;
+    font-style: italic;
+  }
+  
+  :-moz-placeholder, ::-moz-placeholder {
+    opacity: 1;
+  }
+  
+  .toggle-all, .delete-button, .delete-completed-button, .menu-2-button {
+    background: none;
+    border: none;
+    outline: none;
+  }
+  
+  .toggle-all {
+    color: #e6e6e6;
+    -ms-grid-column-align: stretch;
+    justify-self: stretch;
+    text-align: center;
+  }
+  
+  .toggle-all-checked {
+    color: #4d4d4d;
+  }
+  
+  .rotate {
+    display: inline-block;
+    font-size: 20px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    pointer-events: none;
+  }
+  
+  .todo-menu-2 {
+    margin: 0 auto;
+    max-width: 640px;
+    padding: 20px 30px;
+    height: 20px;
+    text-align: center;
+    background-color: var(--bg-list);
+    color: var(--font-color);
+    font-size: 14px;
+    font-weight: 100;
+    display: flex;
+    border-radius: 0px 0px 8px 8px;
+    padding: 0px 30px 15px;
+  }
+  
+  .todo-menu-2 .todos-left {
+    padding-right: 100px;
+    line-height: 20px;
+  }
+  
+  
+  .todo-menu-2 .delete-completed-button, .todo-menu-2 .menu-2-button, .todo-menu-2 .todos-left {
+    color: #575974;
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .todo-menu-2 .menu-2-button {
+    padding: 2px 20px;
+    cursor: pointer;
+  }
+  
+  .todo-menu-2 .menu-2-button:hover {
+    color: #4A7DE6;
+  }
+  
+  .active {
+    color: #4A7DE6;
+  }
+  
+  .todo-menu-2 .delete-completed-button {
+    -ms-grid-column-align: end;
+    justify-self: end;
+    padding-right: 20px;
+    margin-left: 80px;
+    cursor: pointer;
+  }
+  
+  .todo-menu-2 .delete-completed-button:hover {
+    color: #4A7DE6;
+  }
+
+  .todos {
+    padding: 10px;
+  }
+
+  .wrap-list-todo {
+    margin: 0;
+    list-style: none;
+    background-color: var(--bg-list);
+    border-radius: 8px;
+    color:#585A76;
+    top: -140px;
+    position: relative;
+    -webkit-box-shadow: 0 12px 25px rgb(0 0 0 / 50%);
+    box-shadow:0 12px 25px rgb(0 0 0 / 50%);
+  }
+  
+  .todos .todo {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50px 550px 50px;
+    grid-template-columns: 50px 550px 50px;
+    border-bottom: 1px solid #ededed;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  
+
+  .todos .todo .checkStyle {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+    margin: 0;
+  }
+  
+  .checkStyle .state label {
+    text-indent: 0;
+  }
+  
+  .checkStyle .state i {
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    color: #fff;
+  }
+  
+  .add-todo-text-input, .todo-text {
+    font-size: 24px;
+    color: #4d4d4d;
+  }
+  
+  .todo-text {
+    padding-top: 20px;
+    padding-bottom: 13px;
+  }
+  
+  .todo-text:focus {
+    outline: none;
+  }
+  
+  .todo-checked-text {
+    color: #d9d9dd;
+    text-decoration: line-through;
+  }
+  
+  .todo-checked-text:focus {
+    color: #4d4d4d;
+    text-decoration: none;
+  }
+  
+  .delete-button {
+    color:var(--font-color-list);
+    -ms-grid-column-align: end;
+    justify-self: end;
+    visibility: hidden;
+    background:url(../images/icon-cross.svg) no-repeat right;
+  }
+  
+  .todos .todo:hover .delete-button {
+    visibility: visible;
+  }
+  
+  .delete-button:hover {
+    cursor: pointer;
+  }
+  
+
+  @media (max-width: 1024px) {
+    .delete-button {
+      -ms-grid-column-align: center;
+      justify-self: center;
+      visibility: visible;
+      margin-right: 10px;
+    }
+  }
+  
+  @media (max-width: 680px) {    
+
+    .add-todo-text-input {
+      width: 78%;
+    }
+
+    .container {
+      position: relative;
+      margin: 0 auto;
+      max-width: 300px;
+    }
+
+    .todo-menu-2 .delete-completed-button {
+       padding: 0px;
+       float: right;
+       margin-top: -35px;
+    }
+
+    .todos .todo {
+      display: flex;
+    }
+    
+    .todos .todo .checkStyle {
+      margin-right: 20px;
+      margin-left: 10px;
+    }
+
+    .title {
+      font-size: 33px;
+    }
+    
+    .todo-app {
+      -ms-grid-rows: 40px 1fr auto;
+      grid-template-rows: 40px 1fr auto;
+    }
+    
+    .todo-menu-1 {
+      -ms-grid-rows: 40px;
+      grid-template-rows: 40px;
+    }
+
+    .todo-menu-2 .menu-2-button {
+      padding: 0px 5px;
+    }
+    
+    .add-todo-text-input, .todo-text {
+      font-size: 16px;
+      width: 78%;
+    }
+    
+    .todo-menu-2 {
+      display: contents;
+      font-size: 12px;
+    }
+    
+    .todo-menu-2 .todos-left {
+      -ms-grid-column-align: center;
+      justify-self: center;
+      margin-left: 20px;
+    }
+    
+    .todo-menu-2 .todo-menu-2-buttons {
+      grid-column: 1 / -1;
+      -ms-grid-row: 1;
+      grid-row: 1;
+      margin-top: 20px;
+      padding-bottom: 20px;
+    }
+    
+    .todo-menu-2 .delete-completed-button {
+      -ms-grid-column-align: center;
+      justify-self: center;
+      margin-top: -75px;
+      margin-right: 20px;
+    }
+    
+    .todo-menu-2 .delete-completed-button:hover {
+      text-decoration: none;
+    }
+    
+    ::-webkit-input-placeholder {
+      font-size: 16px;
+    }
+    
+    :-ms-input-placeholder {
+      font-size: 16px;
+    }
+    
+    ::-ms-input-placeholder {
+      font-size: 16px;
+    }
+    
+    ::placeholder {
+      font-size: 16px;
+    }
+    
+    .rotate {
+      font-size: 14px;
+    }
+  }

@@ -1,0 +1,954 @@
+.mdi-check:before {
+    content: "✓";
+    background:linear-gradient(#57DDFF, #C058F3);
+    border-radius: 50%;
+}
+
+ .checkStyle * {
+    box-sizing: border-box;
+  }
+  
+  .checkStyle input:not([type='checkbox']):not([type='radio']) {
+    display: none;
+  }
+  
+  .checkStyle {
+    position: relative;
+    display: inline-block;
+    margin-right: 1em;
+    white-space: nowrap;
+    line-height: 1;
+  }
+  
+  .checkStyle input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 1em;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .checkStyle .state label {
+    position: initial;
+    display: inline-block;
+    font-weight: normal;
+    margin: 0;
+    text-indent: 1.5em;
+    min-width: calc(1em + 2px);
+  }
+  
+  .checkStyle .state label:before,
+  .checkStyle .state label:after {
+    content: '';
+    width: calc(1em + 2px);
+    height: calc(1em + 2px);
+    display: block;
+    box-sizing: border-box;
+    border-radius: 0;
+    border: 1px solid transparent;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: calc((0% - (100% - 1em)) - 8%);
+    background-color: transparent;
+  }
+  
+  .checkStyle .state label:before {
+    border-color: #bdc3c7;
+  }
+  
+  .checkStyle .state.p-is-hover,
+  .checkStyle .state.p-is-indeterminate {
+    display: none;
+  }
+  
+  @-webkit-keyframes zoom {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  }
+  
+  @keyframes zoom {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  }
+  
+  @-webkit-keyframes tada {
+    0% {
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 0;
+      -webkit-transform: scale(7);
+      transform: scale(7);
+    }
+    38% {
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    55% {
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+    72% {
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    81% {
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      -webkit-transform: scale(1.24);
+      transform: scale(1.24);
+    }
+    89% {
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    95% {
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      -webkit-transform: scale(1.04);
+      transform: scale(1.04);
+    }
+    100% {
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes tada {
+    0% {
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 0;
+      -webkit-transform: scale(7);
+      transform: scale(7);
+    }
+    38% {
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    55% {
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+    72% {
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    81% {
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      -webkit-transform: scale(1.24);
+      transform: scale(1.24);
+    }
+    89% {
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    95% {
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      -webkit-transform: scale(1.04);
+      transform: scale(1.04);
+    }
+    100% {
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  @-webkit-keyframes jelly {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(0.85, 1.15, 1);
+      transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  @keyframes jelly {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(0.85, 1.15, 1);
+      transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  @-webkit-keyframes rotate {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateZ(-200px) rotate(-45deg);
+      transform: translateZ(-200px) rotate(-45deg);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateZ(0) rotate(0);
+      transform: translateZ(0) rotate(0);
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateZ(-200px) rotate(-45deg);
+      transform: translateZ(-200px) rotate(-45deg);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateZ(0) rotate(0);
+      transform: translateZ(0) rotate(0);
+    }
+  }
+  
+  @-webkit-keyframes pulse {
+    0% {
+      box-shadow: 0px 0px 0px 0px #bdc3c7;
+    }
+    100% {
+      box-shadow: 0px 0px 0px 1.5em rgba(189, 195, 199, 0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0px 0px 0px 0px #bdc3c7;
+    }
+    100% {
+      box-shadow: 0px 0px 0px 1.5em rgba(189, 195, 199, 0);
+    }
+  }
+  
+  .checkStyle.p-default.p-fill .state label:after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  .checkStyle.p-default .state label:after {
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    transform: scale(0.6);
+  }
+  
+  .checkStyle.p-default input:checked ~ .state label:after {
+    background-color: #bdc3c7 !important;
+  }
+  
+  .checkStyle.p-default.p-thick .state label:before,
+  .checkStyle.p-default.p-thick .state label:after {
+    border-width: calc(1em / 7);
+  }
+  
+  .checkStyle.p-default.p-thick .state label:after {
+    -webkit-transform: scale(0.4) !important;
+    -ms-transform: scale(0.4) !important;
+    transform: scale(0.4) !important;
+  }
+  
+  .checkStyle.p-icon .state .icon {
+    position: absolute;
+    font-size: 26px;
+    width: calc(1em + 2px);
+    height: calc(1em + 2px);
+    left: -4px;
+    z-index: 1;
+    text-align: center;
+    line-height: normal;
+    top: calc((-11px - (100% - 26px)) - 11%);
+    border: 1px solid transparent;
+    opacity: 0;
+  }
+  
+  .checkStyle.p-icon .state .icon:before {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 1;
+  }
+  
+  .checkStyle.p-icon input:checked ~ .state .icon {
+    opacity: 1;
+  }
+  
+  .checkStyle.p-icon input:checked ~ .state label:before {
+    border-color: #5a656b;
+  }
+  
+  .checkStyle.p-svg .state .svg {
+    position: absolute;
+    font-size: 1em;
+    width: calc(1em + 2px);
+    height: calc(1em + 2px);
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    line-height: normal;
+    top: calc((0% - (100% - 1em)) - 8%);
+    border: 1px solid transparent;
+    opacity: 0;
+  }
+  
+  .checkStyle.p-svg .state svg {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 1;
+  }
+  
+  .checkStyle.p-svg input:checked ~ .state .svg {
+    opacity: 1;
+  }
+  
+  .checkStyle.p-image .state img {
+    opacity: 0;
+    position: absolute;
+    width: calc(1em + 2px);
+    height: calc(1em + 2px);
+    top: 0;
+    top: calc((0% - (100% - 1em)) - 8%);
+    left: 0;
+    z-index: 0;
+    text-align: center;
+    line-height: normal;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  
+  .checkStyle.p-image input:checked ~ .state img {
+    opacity: 1;
+  }
+  
+  .checkStyle.p-switch input {
+    min-width: 2em;
+  }
+  
+  .checkStyle.p-switch .state {
+    position: relative;
+  }
+  
+  .checkStyle.p-switch .state:before {
+    content: '';
+    border: 1px solid #bdc3c7;
+    border-radius: 60px;
+    width: 2em;
+    box-sizing: unset;
+    height: calc(1em + 2px);
+    position: absolute;
+    top: 0;
+    top: calc((0% - (100% - 1em)) - 16%);
+    z-index: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .checkStyle.p-switch .state label {
+    text-indent: 2.5em;
+  }
+  
+  .checkStyle.p-switch .state label:before,
+  .checkStyle.p-switch .state label:after {
+    transition: all 0.5s ease;
+    border-radius: 100%;
+    left: 0;
+    border-color: transparent;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  
+  .checkStyle.p-switch .state label:after {
+    background-color: #bdc3c7 !important;
+  }
+  
+  .checkStyle.p-switch input:checked ~ .state:before {
+    border-color: #5a656b;
+  }
+  
+  .checkStyle.p-switch input:checked ~ .state label:before {
+    opacity: 0;
+  }
+  
+  .checkStyle.p-switch input:checked ~ .state label:after {
+    background-color: #5a656b !important;
+    left: 1em;
+  }
+  
+  .checkStyle.p-switch.p-fill input:checked ~ .state:before {
+    border-color: #5a656b;
+    background-color: #5a656b !important;
+  }
+  
+  .checkStyle.p-switch.p-fill input:checked ~ .state label:before {
+    opacity: 0;
+  }
+  
+  .checkStyle.p-switch.p-fill input:checked ~ .state label:after {
+    background-color: #fff !important;
+    left: 1em;
+  }
+  
+  .checkStyle.p-switch.p-slim .state:before {
+    height: 0.1em;
+    background: #bdc3c7 !important;
+    top: calc(50% - 0.1em);
+  }
+  
+  .checkStyle.p-switch.p-slim input:checked ~ .state:before {
+    border-color: #5a656b;
+    background-color: #5a656b !important;
+  }
+  
+  .checkStyle.p-has-hover input:hover ~ .state:not(.p-is-hover) {
+    display: none;
+  }
+  
+  .checkStyle.p-has-hover input:hover ~ .state.p-is-hover {
+    display: block;
+  }
+  
+  .checkStyle.p-has-hover input:hover ~ .state.p-is-hover .icon {
+    display: block;
+  }
+  
+  .checkStyle.p-has-focus input:focus ~ .state label:before {
+    box-shadow: 0px 0px 3px 0px #bdc3c7;
+  }
+  
+  .checkStyle.p-has-indeterminate input[type='checkbox']:indeterminate ~ .state:not(.p-is-indeterminate) {
+    display: none;
+  }
+  
+  .checkStyle.p-has-indeterminate input[type='checkbox']:indeterminate ~ .state.p-is-indeterminate {
+    display: block;
+  }
+  
+  .checkStyle.p-has-indeterminate input[type='checkbox']:indeterminate ~ .state.p-is-indeterminate .icon {
+    display: block;
+    opacity: 1;
+  }
+  
+  .checkStyle.p-toggle .state.p-on {
+    opacity: 0;
+    display: none;
+  }
+  
+  .checkStyle.p-toggle .state.p-off,
+  .checkStyle.p-toggle .state .icon,
+  .checkStyle.p-toggle .state .svg,
+  .checkStyle.p-toggle .state img {
+    opacity: 1;
+    display: inherit;
+  }
+  
+  .checkStyle.p-toggle .state.p-off .icon {
+    color: #bdc3c7;
+  }
+  
+  .checkStyle.p-toggle input:checked ~ .state.p-on {
+    opacity: 1;
+    display: inherit;
+  }
+  
+  .checkStyle.p-toggle input:checked ~ .state.p-off {
+    opacity: 0;
+    display: none;
+  }
+  
+  .checkStyle.p-plain input:checked ~ .state label:before,
+  .checkStyle.p-plain.p-toggle .state label:before {
+    content: none;
+  }
+  
+  .checkStyle.p-plain.p-plain .icon {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  .checkStyle.p-round .state label:before,
+  .checkStyle.p-round .state label:after {
+    border-radius: 100%;
+  }
+  
+  .checkStyle.p-round.p-icon .state .icon {
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  
+  .checkStyle.p-round.p-icon .state .icon:before {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  
+  .checkStyle.p-curve .state label:before,
+  .checkStyle.p-curve .state label:after {
+    border-radius: 20%;
+  }
+  
+  .checkStyle.p-smooth label:before,
+  .checkStyle.p-smooth label:after,
+  .checkStyle.p-smooth .icon,
+  .checkStyle.p-smooth .svg {
+    transition: all 0.5s ease;
+  }
+  
+  .checkStyle.p-smooth input:checked + .state label:after {
+    transition: all 0.3s ease;
+  }
+  
+  .checkStyle.p-smooth input:checked + .state .icon,
+  .checkStyle.p-smooth input:checked + .state .svg,
+  .checkStyle.p-smooth input:checked + .state img {
+    -webkit-animation: zoom 0.2s ease;
+    animation: zoom 0.2s ease;
+  }
+  
+  .checkStyle.p-smooth.p-default input:checked + .state label:after {
+    -webkit-animation: zoom 0.2s ease;
+    animation: zoom 0.2s ease;
+  }
+  
+  .checkStyle.p-smooth.p-plain input:checked + .state label:before {
+    content: '';
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    transition: all 0.5s ease;
+  }
+  
+  .checkStyle.p-tada:not(.p-default) input:checked + .state .icon,
+  .checkStyle.p-tada:not(.p-default) input:checked + .state .svg,
+  .checkStyle.p-tada:not(.p-default) input:checked + .state img,
+  .checkStyle.p-tada:not(.p-default) input:checked + .state label:before,
+  .checkStyle.p-tada:not(.p-default) input:checked + .state label:after {
+    -webkit-animation: tada 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1 alternate;
+    animation: tada 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1 alternate;
+    opacity: 1;
+  }
+  
+  .checkStyle.p-jelly:not(.p-default) input:checked + .state .icon,
+  .checkStyle.p-jelly:not(.p-default) input:checked + .state .svg,
+  .checkStyle.p-jelly:not(.p-default) input:checked + .state img,
+  .checkStyle.p-jelly:not(.p-default) input:checked + .state label:before,
+  .checkStyle.p-jelly:not(.p-default) input:checked + .state label:after {
+    -webkit-animation: jelly 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: jelly 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 1;
+  }
+  
+  .checkStyle.p-jelly:not(.p-default) input:checked + .state label:before {
+    border-color: transparent;
+  }
+  
+  .checkStyle.p-rotate:not(.p-default) input:checked ~ .state .icon,
+  .checkStyle.p-rotate:not(.p-default) input:checked ~ .state .svg,
+  .checkStyle.p-rotate:not(.p-default) input:checked ~ .state img,
+  .checkStyle.p-rotate:not(.p-default) input:checked ~ .state label:before,
+  .checkStyle.p-rotate:not(.p-default) input:checked ~ .state label:after {
+    -webkit-animation: rotate 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: rotate 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 1;
+  }
+  
+  .checkStyle.p-rotate:not(.p-default) input:checked ~ .state label:before {
+    border-color: transparent;
+  }
+  
+  .checkStyle.p-pulse:not(.p-switch) input:checked ~ .state label:before {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
+  }
+  
+  .checkStyle input[disabled] {
+    cursor: not-allowed;
+    display: none;
+  }
+  
+  .checkStyle input[disabled] ~ * {
+    opacity: .5;
+  }
+  
+  .checkStyle.p-locked input {
+    display: none;
+    cursor: not-allowed;
+  }
+  
+  .checkStyle input:checked ~ .state.p-primary label:after,
+  .checkStyle.p-toggle .state.p-primary label:after {
+    background-color: #428bca !important;
+  }
+  
+  .checkStyle input:checked ~ .state.p-primary .icon,
+  .checkStyle input:checked ~ .state.p-primary .svg,
+  .checkStyle.p-toggle .state.p-primary .icon,
+  .checkStyle.p-toggle .state.p-primary .svg {
+    color: #fff;
+    stroke: #fff;
+  }
+  
+  .checkStyle input:checked ~ .state.p-primary-o label:before,
+  .checkStyle.p-toggle .state.p-primary-o label:before {
+    border-color: #428bca;
+  }
+  
+  .checkStyle input:checked ~ .state.p-primary-o label:after,
+  .checkStyle.p-toggle .state.p-primary-o label:after {
+    background-color: transparent;
+  }
+  
+  .checkStyle input:checked ~ .state.p-primary-o .icon,
+  .checkStyle input:checked ~ .state.p-primary-o .svg,
+  .checkStyle input:checked ~ .state.p-primary-o svg,
+  .checkStyle.p-toggle .state.p-primary-o .icon,
+  .checkStyle.p-toggle .state.p-primary-o .svg,
+  .checkStyle.p-toggle .state.p-primary-o svg {
+    color: #428bca;
+    stroke: #428bca;
+  }
+  
+  .checkStyle.p-default:not(.p-fill) input:checked ~ .state.p-primary-o label:after {
+    background-color: #428bca !important;
+  }
+  
+  .checkStyle.p-switch input:checked ~ .state.p-primary:before {
+    border-color: #428bca;
+  }
+  
+  .checkStyle.p-switch.p-fill input:checked ~ .state.p-primary:before {
+    background-color: #428bca !important;
+  }
+  
+  .checkStyle.p-switch.p-slim input:checked ~ .state.p-primary:before {
+    border-color: #245682;
+    background-color: #245682 !important;
+  }
+  
+  .checkStyle input:checked ~ .state.p-info label:after,
+  .checkStyle.p-toggle .state.p-info label:after {
+    background-color: #5bc0de !important;
+  }
+  
+  .checkStyle input:checked ~ .state.p-info .icon,
+  .checkStyle input:checked ~ .state.p-info .svg,
+  .checkStyle.p-toggle .state.p-info .icon,
+  .checkStyle.p-toggle .state.p-info .svg {
+    color: #fff;
+    stroke: #fff;
+  }
+  
+  .checkStyle input:checked ~ .state.p-info-o label:before,
+  .checkStyle.p-toggle .state.p-info-o label:before {
+    border-color: #5bc0de;
+  }
+  
+  .checkStyle input:checked ~ .state.p-info-o label:after,
+  .checkStyle.p-toggle .state.p-info-o label:after {
+    background-color: transparent;
+  }
+  
+  .checkStyle input:checked ~ .state.p-info-o .icon,
+  .checkStyle input:checked ~ .state.p-info-o .svg,
+  .checkStyle input:checked ~ .state.p-info-o svg,
+  .checkStyle.p-toggle .state.p-info-o .icon,
+  .checkStyle.p-toggle .state.p-info-o .svg,
+  .checkStyle.p-toggle .state.p-info-o svg {
+    color: #5bc0de;
+    stroke: #5bc0de;
+  }
+  
+  .checkStyle.p-default:not(.p-fill) input:checked ~ .state.p-info-o label:after {
+    background-color: #5bc0de !important;
+  }
+  
+  .checkStyle.p-switch input:checked ~ .state.p-info:before {
+    border-color: #5bc0de;
+  }
+  
+  .checkStyle.p-switch.p-fill input:checked ~ .state.p-info:before {
+    background-color: #5bc0de !important;
+  }
+  
+  .checkStyle.p-switch.p-slim input:checked ~ .state.p-info:before {
+    border-color: #2390b0;
+    background-color: #2390b0 !important;
+  }
+  
+  .checkStyle input:checked ~ .state.p-success label:after,
+  .checkStyle.p-toggle .state.p-success label:after {
+    background-color: #5cb85c !important;
+  }
+  
+  .checkStyle input:checked ~ .state.p-success .icon,
+  .checkStyle input:checked ~ .state.p-success .svg,
+  .checkStyle.p-toggle .state.p-success .icon,
+  .checkStyle.p-toggle .state.p-success .svg {
+    color: #fff;
+    stroke: #fff;
+  }
+  
+  .checkStyle input:checked ~ .state.p-success-o label:before,
+  .checkStyle.p-toggle .state.p-success-o label:before {
+    border-color: #5cb85c;
+  }
+  
+  .checkStyle input:checked ~ .state.p-success-o label:after,
+  .checkStyle.p-toggle .state.p-success-o label:after {
+    background-color: transparent;
+  }
+  
+  .checkStyle input:checked ~ .state.p-success-o .icon,
+  .checkStyle input:checked ~ .state.p-success-o .svg,
+  .checkStyle input:checked ~ .state.p-success-o svg,
+  .checkStyle.p-toggle .state.p-success-o .icon,
+  .checkStyle.p-toggle .state.p-success-o .svg,
+  .checkStyle.p-toggle .state.p-success-o svg {
+    color: #5cb85c;
+    stroke: #5cb85c;
+  }
+  
+  .checkStyle.p-default:not(.p-fill) input:checked ~ .state.p-success-o label:after {
+    background-color: #5cb85c !important;
+  }
+  
+  .checkStyle.p-switch input:checked ~ .state.p-success:before {
+    border-color: #5cb85c;
+  }
+  
+  .checkStyle.p-switch.p-fill input:checked ~ .state.p-success:before {
+    background-color: #5cb85c !important;
+  }
+  
+  .checkStyle.p-switch.p-slim input:checked ~ .state.p-success:before {
+    border-color: #357935;
+    background-color: #357935 !important;
+  }
+  
+  .checkStyle input:checked ~ .state.p-warning label:after,
+  .checkStyle.p-toggle .state.p-warning label:after {
+    background-color: #f0ad4e !important;
+  }
+  
+  .checkStyle input:checked ~ .state.p-warning .icon,
+  .checkStyle input:checked ~ .state.p-warning .svg,
+  .checkStyle.p-toggle .state.p-warning .icon,
+  .checkStyle.p-toggle .state.p-warning .svg {
+    color: #fff;
+    stroke: #fff;
+  }
+  
+  .checkStyle input:checked ~ .state.p-warning-o label:before,
+  .checkStyle.p-toggle .state.p-warning-o label:before {
+    border-color: #f0ad4e;
+  }
+  
+  .checkStyle input:checked ~ .state.p-warning-o label:after,
+  .checkStyle.p-toggle .state.p-warning-o label:after {
+    background-color: transparent;
+  }
+  
+  .checkStyle input:checked ~ .state.p-warning-o .icon,
+  .checkStyle input:checked ~ .state.p-warning-o .svg,
+  .checkStyle input:checked ~ .state.p-warning-o svg,
+  .checkStyle.p-toggle .state.p-warning-o .icon,
+  .checkStyle.p-toggle .state.p-warning-o .svg,
+  .checkStyle.p-toggle .state.p-warning-o svg {
+    color: #f0ad4e;
+    stroke: #f0ad4e;
+  }
+  
+  .checkStyle.p-default:not(.p-fill) input:checked ~ .state.p-warning-o label:after {
+    background-color: #f0ad4e !important;
+  }
+  
+  .checkStyle.p-switch input:checked ~ .state.p-warning:before {
+    border-color: #f0ad4e;
+  }
+  
+  .checkStyle.p-switch.p-fill input:checked ~ .state.p-warning:before {
+    background-color: #f0ad4e !important;
+  }
+  
+  .checkStyle.p-switch.p-slim input:checked ~ .state.p-warning:before {
+    border-color: #c77c11;
+    background-color: #c77c11 !important;
+  }
+  
+  .checkStyle input:checked ~ .state.p-danger label:after,
+  .checkStyle.p-toggle .state.p-danger label:after {
+    background-color: #d9534f !important;
+  }
+  
+  .checkStyle input:checked ~ .state.p-danger .icon,
+  .checkStyle input:checked ~ .state.p-danger .svg,
+  .checkStyle.p-toggle .state.p-danger .icon,
+  .checkStyle.p-toggle .state.p-danger .svg {
+    color: #fff;
+    stroke: #fff;
+  }
+  
+  .checkStyle input:checked ~ .state.p-danger-o label:before,
+  .checkStyle.p-toggle .state.p-danger-o label:before {
+    border-color: #d9534f;
+  }
+  
+  .checkStyle input:checked ~ .state.p-danger-o label:after,
+  .checkStyle.p-toggle .state.p-danger-o label:after {
+    background-color: transparent;
+  }
+  
+  .checkStyle input:checked ~ .state.p-danger-o .icon,
+  .checkStyle input:checked ~ .state.p-danger-o .svg,
+  .checkStyle input:checked ~ .state.p-danger-o svg,
+  .checkStyle.p-toggle .state.p-danger-o .icon,
+  .checkStyle.p-toggle .state.p-danger-o .svg,
+  .checkStyle.p-toggle .state.p-danger-o svg {
+    color: #d9534f;
+    stroke: #d9534f;
+  }
+  
+  .checkStyle.p-default:not(.p-fill) input:checked ~ .state.p-danger-o label:after {
+    background-color: #d9534f !important;
+  }
+  
+  .checkStyle.p-switch input:checked ~ .state.p-danger:before {
+    border-color: #d9534f;
+  }
+  
+  .checkStyle.p-switch.p-fill input:checked ~ .state.p-danger:before {
+    background-color: #d9534f !important;
+  }
+  
+  .checkStyle.p-switch.p-slim input:checked ~ .state.p-danger:before {
+    border-color: #a02622;
+    background-color: #a02622 !important;
+  }
+  
+  .checkStyle.p-bigger label:before,
+  .checkStyle.p-bigger label:after,
+  .checkStyle.p-bigger .icon,
+  .checkStyle.p-bigger .svg,
+  .checkStyle.p-bigger .img {
+    font-size: 1.2em !important;
+    top: calc((0% - (100% - 1em)) - 35%) !important;
+  }
+  
+  .checkStyle.p-bigger label {
+    text-indent: 1.7em;
+  }
+  
+  @media print {
+    .checkStyle .state:before,
+    .checkStyle .state label:before,
+    .checkStyle .state label:after,
+    .checkStyle .state .icon {
+      color-adjust: exact;
+      /* stylelint-disable */
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }

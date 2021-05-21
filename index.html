@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-framework="javascript">
+	<head>
+		<meta charset="utf-8">
+		<title>Todo list</title>
+		<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/checkStyle.css">
+	</head>
+	<body>
+        <section class="theme-bg">
+            <div class="container">
+                <h1>todo</h1>
+                <label class="theme-switch" for="checkbox"><input type="checkbox" class="hide" id="checkbox" /><div class="slider round"></div>  
+                    <div id="todoMenu1" class="todo-menu-1">
+                        <button id="toggleAll" class="toggle-all hide"></button>
+                        <div class="round-list"></div>
+                        <input id="addTodoTextInput" class="add-todo-text-input" type="text" placeholder="Create new todo" aria-label="Enter to do text" autofocus>
+                    </div>
+            </div>
+        </section>
+        <section class="main">
+            <div class="container">
+                <div class="wrap-list-todo">
+                    <ul id="todos" class="todos"></ul>
+                    <div id="todoMenu2" class="todo-menu-2">
+                        <label id="todosLeft" class="todos-left" aria-label="item left"></label>
+                    <div id="todoMenu2Buttons" class="todo-menu-2-buttons">
+                        <button id="showAllTodos" class="menu-2-button active" aria-label="Show all to do tasks">All</button>
+                        <button id="showUncompletedTodos" class="menu-2-button" aria-label="Show active to do tasks">Active</button>
+                        <button id="showCompletedTodos" class="menu-2-button" aria-label="Show completed to do tasks">Completed</button>
+                    </div>
+                        <button id="deleteCompletedButton" class="delete-completed-button" aria-label="Clear completed to do tasks">Clear completed</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/theme.js"></script>
+        <script src="js/todo.js"></script>
+
+	</body>
+</html>
